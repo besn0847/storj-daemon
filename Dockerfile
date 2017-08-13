@@ -15,6 +15,7 @@ RUN apk add --no-cache bash g++ git make openssl-dev python vim && \
 RUN mkdir /data 
 
 ADD Storj_Farmer_Contracts.js /usr/lib/
+ADD config.json /data/
 
 EXPOSE 4000
 EXPOSE 4001
