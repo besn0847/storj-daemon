@@ -22,4 +22,4 @@ EXPOSE 4001
 EXPOSE 4002
 EXPOSE 4003
 
-CMD storjshare start -d --config /data/config.json  
+CMD storjshare daemon && storjshare start --config /data/config.json && while(true); do sleep 30; done
