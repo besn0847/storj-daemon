@@ -19,10 +19,10 @@
   // Interface to bind RPC server, use 0.0.0.0 for all interfaces or if you
   // have a public address, use that, else leave 127.0.0.1 and Storj Share
   // will try to determine your address
-  "rpcAddress": "75010.besnard.mobi",
+  "rpcAddress": "kubmix-uk.besnard.mobi",
   // Port to bind for RPC server, make sure this is forwarded if behind a
   // NAT or firewall - otherwise Storj Share will try to punch out
-  "rpcPort": 4000,
+  "rpcPort": 30400,
   // doNotTraverseNat: true requires you to have an external ip address.
   // You can use a proxy to gain an external IP address.
   // doNotTraverseNat: false Enables NAT traversal strategies
@@ -37,8 +37,8 @@
   // If providing tunnels, the starting and ending port range to open for
   // them
   "tunnelGatewayRange": {
-    "min": 4001,
-    "max": 4003
+    "min": 30401,
+    "max": 30403
   },
   // Number of times to retry joining the network and the wait time between
   "joinRetry": {

@@ -17,9 +17,9 @@ RUN mkdir /data
 ADD Storj_Farmer_Contracts.js /usr/lib/
 ADD config.json /data/
 
-EXPOSE 4000
-EXPOSE 4001
-EXPOSE 4002
-EXPOSE 4003
+EXPOSE 30400
+EXPOSE 30401
+EXPOSE 30402
+EXPOSE 30403
 
 CMD storjshare daemon && storjshare start --config /data/config.json && while(true); do sleep 30; done
