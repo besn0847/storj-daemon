@@ -19,7 +19,7 @@
   // Interface to bind RPC server, use 0.0.0.0 for all interfaces or if you
   // have a public address, use that, else leave 127.0.0.1 and Storj Share
   // will try to determine your address
-  "rpcAddress": "kubmix-uk.besnard.mobi",
+  "rpcAddress": "kubmix-us.besnard.mobi",
   // Port to bind for RPC server, make sure this is forwarded if behind a
   // NAT or firewall - otherwise Storj Share will try to punch out
   "rpcPort": 30400,
