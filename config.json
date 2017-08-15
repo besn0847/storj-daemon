@@ -50,7 +50,7 @@
   "offerBackoffLimit": 4,
   // ECDSA private key for your network identity, your Node ID is derived from
   // this and it is used to sign and verify messages
-  "networkPrivateKey": "aa33c2925e772edf7e953737191ec2b859389cb5e7eb3c277a0407e89e94f8ac",
+  "networkPrivateKey": "86eff194698e48813c03576b61fdbc7b8b5b9299b63c0ce3ab39bbda0e748a42",
   // Determines how much detail is shown in the log:
   // 4 - DEBUG | 3 - INFO | 2 - WARN | 1 - ERROR | 0 - SILENT
   "loggerVerbosity": 3,
