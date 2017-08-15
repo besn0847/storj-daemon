@@ -32,21 +32,21 @@ metadata:
     run : storj
 spec:
   selector:
+    app: storj
+  type: NodePort
+  ports:
    - name: port30400
      protocol: TCP
      port: 30400
      nodePort: 30400
-    app: storj
    - name: port30401
      protocol: TCP
      port: 30401
      nodePort: 30401
-  type: NodePort
    - name: port30402
      protocol: TCP
      port: 30402
      nodePort: 30402
-  ports:
    - name: port30403
      protocol: TCP
      port: 30403
