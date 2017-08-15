@@ -15,11 +15,11 @@ RUN apk add --no-cache bash g++ git make openssl-dev python vim && \
 RUN mkdir /data 
 
 ADD Storj_Farmer_Contracts.js /usr/lib/
-ADD config.json /data/
+ADD config.json /etc/
 
 EXPOSE 30400
 EXPOSE 30401
 EXPOSE 30402
 EXPOSE 30403
 
-CMD storjshare daemon && storjshare start --config /data/config.json && while(true); do sleep 30; done
+CMD storjshare daemon && storjshare start --config /etc/config.json && while(true); do sleep 30; done
