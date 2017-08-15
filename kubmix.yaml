@@ -1,0 +1,53 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: storj
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: storj
+    spec:
+       containers:
+       - name: storj
+         image: besn0847/storj-daemon:kubmix004
+         ports:
+           - containerPort: 30400
+           - containerPort: 30401
+           - containerPort: 30402
+           - containerPort: 30403
+         volumeMounts:
+         - name: storj-persistent-storage
+           mountPath: /data
+       volumes:
+       - name: storj-persistent-storage
+         emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-storj
+  labels:
+    run : storj
+spec:
+  selector:
+   - name: port30400
+     protocol: TCP
+     port: 30400
+     nodePort: 30400
+    app: storj
+   - name: port30401
+     protocol: TCP
+     port: 30401
+     nodePort: 30401
+  type: NodePort
+   - name: port30402
+     protocol: TCP
+     port: 30402
+     nodePort: 30402
+  ports:
+   - name: port30403
+     protocol: TCP
+     port: 30403
+     nodePort: 30403
